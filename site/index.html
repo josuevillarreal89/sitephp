@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="themes/mdl/material.min.css">
+        <script src="themes/mdl/material.min.js"></script>
+        <link rel="stylesheet" href="themes/mdl/icss/icon.css">
+        <link rel="stylesheet" href="css/material.deep_purple-lime.min.css">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-tabs mdl-layout--fixed-header">
+            <header class="mdl-layout__header mdl-layout__header--waterfall">
+
+                <!-- HEADER PRINCIPAL -->
+                <div class="mdl-layout__header-row">
+
+                    <div class="mdl-layout-icon"></div>
+
+                    <h2 class="mdl-layout-title">Dummy</h2>
+                    <div class="mdl-layout-spacer">
+
+                    </div>
+                    <button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">more_vert</i>
+                    </button>
+                    <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="menu">
+                        <li><a onclick="alert('Hola');" class="mdl-menu__item">Test</a></li>
+                    </ul>
+                </div>
+
+                <!-- TABS -->
+                <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+
+                    <!-- TAB 1 -->
+                    <a href="#about" class="mdl-layout__tab is-active">Playlist</a>
+                    <a href="#job" class="mdl-layout__tab">Search</a>
+                    <a href="#skills" class="mdl-layout__tab">Albums</a>
+                    <a href="#contacts" class="mdl-layout__tab">News<span class="mdl-badge" data-badge="24"></span></a>
+
+
+                </div>
+
+            </header>
+
+            <div class="mdl-layout__drawer">
+
+                <div class="mdl-layout-title">Men&uacute;</div>
+
+                <!-- MENU DE NAVEGACION -->
+                <nav class="mdl-navigation">
+
+                    <a href="#about" class="mdl-navigation__link" onclick="changeTab(event)">Menu 1</a>
+                    <a href="#job" class="mdl-navigation__link" onclick="changeTab(event)">Menu 2</a>
+                    <a href="#skills" class="mdl-navigation__link" onclick="changeTab(event)">Menu 3</a>
+                    <a href="#contacts" class="mdl-navigation__link" onclick="changeTab(event)">Menu 4</a>
+
+                </nav>
+
+            </div>
+
+            <main class="mdl-layout__content">
+
+                <section id="about" class="mdl-layout__tab-panel is-active">
+                    <div class="page-content">
+
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col mdl-layout--large-screen-only"></div>
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+                                <div class="mdl-card mdl-shadow--4dp mdl-card--full">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">Titulo</h2>
+                                        <p class="mdl-card__subtitle-text">Subtitulo</p>
+                                    </div>
+                                    <div class="mdl-card__media">
+                                        <img src="img/tacos.jpeg" style="width: 100%;">
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Quisque risus ligula, sagittis vestibulum tempor sed, cursus a dolor.
+                                        Praesent dui ipsum, vulputate a neque sit amet, vulputate euismod nulla.
+                                        Curabitur ut blandit dolor. Fusce vel porta leo, et porta nulla.
+                                        In sed diam consectetur neque efficitur accumsan. Sed leo ante,
+                                        fermentum eu dapibus ac, gravida sed mauris.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col mdl-layout--large-screen-only"></div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section id="job" class="mdl-layout__tab-panel">
+                    <div class="page-content">
+
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+                                <div class="mdl-card mdl-shadow--4dp mdl-card--full">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">Titulo de card 1</h2>
+                                        <span class="mdl-subtitle_text">Sub 1</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+                                <div class="mdl-card mdl-shadow--4dp mdl-card--full">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">Titulo de card 1</h2>
+                                        <span class="mdl-subtitle_text">Sub 1</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+                                <div class="mdl-card mdl-shadow--4dp mdl-card--full">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">Titulo de card 1</h2>
+                                        <span class="mdl-subtitle_text">Sub 1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section id="skills" class="mdl-layout__tab-panel">
+                    <div class="page-content">
+                        ALBUMS
+                    </div>
+                </section>
+
+                <section id="contacts" class="mdl-layout__tab-panel">
+                    <div class="page-content">
+                        NEWS
+                    </div>
+                </section>
+
+            </main>
+
+            <footer class="mdl-mini-footer">
+
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">
+                        &copy; Copyright Josu&eacute; Silva 2016.
+                    </div>
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Privacy and Terms</a></li>
+                        <li><a href="#">User Agreement</a></li>
+                    </ul>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <button class="mdl-mini-footer__social-btn">
+                        <img src="img/Facebook.png" style="width: 39px; height: 39px;">
+                    </button>
+                </div>
+
+            </footer>
+
+        </div>
+        <script src="js/index.js"></script>
+    </body>
+</html>

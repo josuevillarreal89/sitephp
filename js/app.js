@@ -1,16 +1,16 @@
-'use strict'
-var app = angular.module( 'sporify', ['ngMaterial', 'ngRoute'] );
+var app = angular.module( 'app', [ 'ngMaterial', 'ngRoute' ] );
 
 app.config( function($routeProvider) {
 
     $routeProvider
-        .when( 'login', {
+        .when( '/login', {
             templateUrl: 'views/login.html',
             controller: 'LoginController'
         })
         .otherwise({
-            redirectTo: 'login'
+            redirectTo: '/login'
         })
+
 
     console.log('Hola')
 

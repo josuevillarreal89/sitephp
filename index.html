@@ -2,19 +2,24 @@
 <html>
     <head>
         <title>Sporify Web Player</title>
-        <link rel="stylesheet" href="themes/mdl/material.min.css">
-        <script src="themes/mdl/material.min.js"></script>
-        <link rel="stylesheet" href="themes/mdl/icss/icon.css">
-        <link rel="stylesheet" href="css/material.deep_purple-lime.min.css">
+        <!--<link rel="stylesheet" href="themes/mdl/material.min.css">-->
+        <!--<script src="themes/mdl/material.min.js"></script>-->
+        <!--<link rel="stylesheet" href="themes/mdl/icss/icon.css">-->
+        <!--<link rel="stylesheet" href="css/material.deep_purple-lime.min.css">-->
         <link rel="stylesheet" href="css/index.css">
 
         <!--Angular Material-->
-        <link rel="stylesheet" href="css/angular-material.min.css">
-        <script src="lib/angular/angular.min.js"></script>
+        <!--<link rel="stylesheet" href="css/angular-material.min.css">-->
+        <!--<script src="js/angular.min.js"></script>-->
+        <!--<script src="js/angular-aria.min.js"></script>-->
+        <!--<script src="js/angular-material.min.js"></script>-->
+        <!--<script src="js/angular-messages.min.js"></script>-->
+        <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+        <script src="bower_components/angular-material/angular-material.min.js"></script>
         <script src="lib/angular-route/angular-route.min.js"></script>
-        <script src="js/angular-aria.min.js"></script>
-        <script src="js/angular-material.min.js"></script>
-        <script src="js/angular-messages.min.js"></script>
 
         <!--App-->
         <script src="js/app.js"></script>
@@ -24,9 +29,9 @@
         <script src="js/controllers/LoginController.js"></script>
 
     </head>
-    <body ng-module="sporify">
+    <body ng-app="app">
 
-        <div ng-view=""></div>
+        <div ng-view="login"></div>
 
     </body>
 </html>
