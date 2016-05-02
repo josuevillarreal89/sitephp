@@ -1,0 +1,19 @@
+<div class="container-fluid" ng-cloak>
+    <md-toolbar>
+        <div class="md-toolbar-tools" style="background-color: #004d40;">
+            <h3><span>Sporify Web Player</span></h3>
+            <span flex></span>
+            <md-button class="mdl-button mdl-js-button mdl-button--colored" style="color: white; background-color: limegreen;" ng-click="login( $event )">Iniciar sesi&oacute;n</md-button>
+            <md-button class="mdl-button mdl-js-button mdl-button--colored" style="color: white; background-color: #1e88e5;">Registrarse</md-button>
+        </div>
+    </md-toolbar>
+    <md-content>
+        <md-tabs md-dynamic-height md-border-bottom>
+            <md-tab ng-repeat="tab in tabs" label="{{ tab.label }}">
+                <h1 class="md-display-2">{{ tab.header }}</h1>
+                <p>{{ tab.content }}</p>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+    </div>
+</div>
