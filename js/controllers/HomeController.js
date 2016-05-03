@@ -39,10 +39,13 @@ app.controller( 'HomeController', function( $scope, $mdDialog, $mdMedia ) {
 
 });
 
-function RegisterController( $scope, $mdDialog ) {
+function RegisterController( $scope, $mdDialog, RegisterService ) {
     $scope.user = {};
     $scope.close = function() {
         $mdDialog.cancel();
+    };
+    $scope.register = function( user ) {
+      RegisterService.register( user );
     };
 }
 

@@ -8,7 +8,7 @@ app.factory( 'LoginService', function( $http ) {
                     if ( result.data == 'success' ) {
                         console.log('Éxito');
                     } else {
-                        console.log('error')
+                        console.log('error');
                     }
                 })
         }
