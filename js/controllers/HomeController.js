@@ -5,13 +5,11 @@ app.controller( 'HomeController', function( $scope, $mdDialog, $mdMedia ) {
     $scope.tabs = [
         {
             label: 'Principal',
-            header: 'Principal',
-            content: 'Contenido principal'
+            urlTemplate: 'tabs/principal.html'
         },
         {
             label: 'Ayuda',
-            header: 'Qué es Sporify?',
-            content: 'No es Spotify'
+            urlTemplate: 'tabs/ayuda.html'
         }
     ];
 
@@ -22,13 +20,36 @@ app.controller( 'HomeController', function( $scope, $mdDialog, $mdMedia ) {
             parent: angular.element(document.body),
             targetEvent: ev,
             clickOutsideToClose:false,
-            fullscreen: useFullScreen,
-            controller: function( $scope, $mdDialog ) {
-                $scope.cancel = function() {
-                    $mdDialog.cancel();
-                }
-            }
+            fullscreen: true,
+            controller: LoginController
+        });
+    };
+
+    $scope.register = function( ev ){
+        var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
+        $mdDialog.show({
+            templateUrl: 'dialogs/register.html',
+            parent: angular.element(document.body),
+            targetEvent: ev,
+            clickOutsideToClose:false,
+            fullscreen: true,
+            controller: RegisterController
         });
     };
 
 });
+
+function RegisterController( $scope, $mdDialog ) {
+    $scope.user = {};
+    $scope.close = function() {
+        $mdDialog.cancel();
+    };
+}
+
+function LoginController( $scope, $mdDialog ) {
+    $scope.account = {};
+    $scope.cancel = function() {
+        $mdDialog.cancel();
+    }
+}
+

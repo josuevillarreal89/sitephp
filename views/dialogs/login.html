@@ -3,21 +3,26 @@
         <md-toolbar>
             <div class="md-toolbar-tools">
                 <h2>Iniciar sesi&oacute;n</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-src="img/ic_close_24px.svg" aria-label="Cerrar ventana"></md-icon>
+                </md-button>
             </div>
         </md-toolbar>
         <md-content layout-padding>
             <md-input-container class="md-block">
                 <label>Nombre de usuario</label>
-                <input type="email" maxlength="50">
+                <input ng-model="account.username" type="email" ng-maxlength="50">
             </md-input-container>
             <md-input-container>
                 <label>Contrase&ntilde;a</label>
-                <input type="password" maxlength="20">
+                <input ng-model="account.password" type="password" ng-maxlength="30">
             </md-input-container>
         </md-content>
         <footer>
-            <md-button class="mdl-button mdl-js-button mdl-button--colored" style="color: white; background-color: limegreen; width: 150px;">Iniciar sesi&oacute;n</md-button>
-            <md-button class="mdl-button mdl-js-button mdl-button--colored" style="color: white; background-color: red; width: 150px;" ng-click="cancel()">Cerrar</md-button>
+            <div align="center">
+                <md-button class="mdl-button mdl-js-button mdl-button--colored" style="color: white; background-color: limegreen; width: 150px;">Iniciar sesi&oacute;n</md-button>
+            </div>
         </footer>
     </form>
 </md-dialog>
